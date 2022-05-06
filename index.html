@@ -1,0 +1,1876 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Introduction to Machine Learning</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/ntnuerc.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <script src="https://daybrush.com/scenejs/release/latest/dist/scene.min.js"></script>
+		
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <script src="js/ntnu.js"></script>
+    </head>
+    <body>
+        <div class="reveal">
+        <div class="slides">
+            
+<section id="first" data-state="first">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1> Introduction to Machine Learning</h1>
+
+   <div class="author" style="text-align:center;">
+    
+<p>
+      Jacky Baltes<br>
+      National Taiwan Normal University<br>
+      Taipei, Taiwan<br>
+      <a href="mailto:jacky.baltes@ntnu.edu.tw">jacky.baltes@ntnu.edu.tw</a><br>
+</p>
+
+   </div>
+   <div class="date">
+    06 May 2022
+   </div>
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-8070cf8e-afff-4bca-a6d7-9556776738d7" ><span id="id-8070cf8e-afff-4bca-a6d7-9556776738d7"><img id="img-id-8070cf8e-afff-4bca-a6d7-9556776738d7"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-07d2b2d9-b0bf-4c9f-80bd-b50d7da68afb" ><span id="id-07d2b2d9-b0bf-4c9f-80bd-b50d7da68afb"><img id="img-id-07d2b2d9-b0bf-4c9f-80bd-b50d7da68afb" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00003_frag_00001" data-state="slide_00003_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+Growing flood of data in our society today</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-d61e4a9c-2f4f-400c-88b7-53afcddbf878" ><span id="id-d61e4a9c-2f4f-400c-88b7-53afcddbf878"><img id="img-id-d61e4a9c-2f4f-400c-88b7-53afcddbf878"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-1e91605d-8eeb-4be3-b0f1-42de408ece45" ><span id="id-1e91605d-8eeb-4be3-b0f1-42de408ece45"><img id="img-id-1e91605d-8eeb-4be3-b0f1-42de408ece45" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00004_frag_00001" data-state="slide_00004_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>Growing flood of data in our society today</p>
+<ul class="simple">
+<li>20th century - creation of data</li>
+<li>21st century - analysis of such data</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-47d7d765-ad87-4149-8c8a-9defceec770b" ><span id="id-47d7d765-ad87-4149-8c8a-9defceec770b"><img id="img-id-47d7d765-ad87-4149-8c8a-9defceec770b"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-b049f915-a5e9-4260-abd2-33c06ae7af52" ><span id="id-b049f915-a5e9-4260-abd2-33c06ae7af52"><img id="img-id-b049f915-a5e9-4260-abd2-33c06ae7af52" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00005_frag_00001" data-state="slide_00005_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>Growing flood of data in our society today</p>
+<ul class="simple">
+<li>20th century - creation of data</li>
+<li>21st century - analysis of such data</li>
+</ul>
+<p>Computational power and storage increased (exponentially)</p>
+<p>New industries (E-commerce, sales, advertising, political influence campaigns)</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-89748c07-9258-41e2-a71c-42efcca7d21d" ><span id="id-89748c07-9258-41e2-a71c-42efcca7d21d"><img id="img-id-89748c07-9258-41e2-a71c-42efcca7d21d"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-81bb5626-203b-45d6-aedc-ca348a4cebab" ><span id="id-81bb5626-203b-45d6-aedc-ca348a4cebab"><img id="img-id-81bb5626-203b-45d6-aedc-ca348a4cebab" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00006_frag_00001" data-state="slide_00006_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-prior-to-2005">
+<h1 class="title">Machine Learning prior to 2005</h1>
+<div class="jb-text docutils container">
+<p>Data mining: using historical data to look for patterns. Focus is on large data sets</p>
+<p>Machine learning: technical basis for data mining</p>
+<p>Applications are too hard to program by hand. The program learns how to do some task</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-aa716b71-d98e-481b-a118-81a10b80855a" ><span id="id-aa716b71-d98e-481b-a118-81a10b80855a"><img id="img-id-aa716b71-d98e-481b-a118-81a10b80855a"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-bdb12602-98f0-4300-b5a3-b97c0caf53fb" ><span id="id-bdb12602-98f0-4300-b5a3-b97c0caf53fb"><img id="img-id-bdb12602-98f0-4300-b5a3-b97c0caf53fb" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00007_frag_00001" data-state="slide_00007_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-prior-to-2005">
+<h1 class="title">Machine Learning prior to 2005</h1>
+<div class="jb-text docutils container">
+<p>Data mining: using historical data to look for patterns. Focus is on large data sets</p>
+<p>Machine learning: technical basis for data mining</p>
+<p>Applications are too hard to program by hand. The program learns how to do some task</p>
+<ul class="simple">
+<li>Autonomous driving, intelligent robotics</li>
+<li>Speech recognition</li>
+<li>Automatic translation</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-aa6a9fb9-2539-4bd6-b966-51edf691abca" ><span id="id-aa6a9fb9-2539-4bd6-b966-51edf691abca"><img id="img-id-aa6a9fb9-2539-4bd6-b966-51edf691abca"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-4f6574e5-156f-44a5-abb5-a47b99b52924" ><span id="id-4f6574e5-156f-44a5-abb5-a47b99b52924"><img id="img-id-4f6574e5-156f-44a5-abb5-a47b99b52924" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00008_frag_00001" data-state="slide_00008_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-post-2005">
+<h1 class="title">Machine Learning post 2005</h1>
+<div class="jb-text docutils container">
+<p>Graphics processing units (GPU) can do highly parallel computation very efficiently</p>
+<p>Neural networks can be run on much larger scale</p>
+<p>Explosive growth of Deep Learning - deep artificial neural networks - recolutionized research in AI, ML, robotics, and many other fields</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-d01209c8-2966-4c53-bd53-a4d1a923b256" ><span id="id-d01209c8-2966-4c53-bd53-a4d1a923b256"><img id="img-id-d01209c8-2966-4c53-bd53-a4d1a923b256"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-b3f838e0-083e-47a9-8ddd-62c09f974ea2" ><span id="id-b3f838e0-083e-47a9-8ddd-62c09f974ea2"><img id="img-id-b3f838e0-083e-47a9-8ddd-62c09f974ea2" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00009_frag_00001" data-state="slide_00009_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-post-2005">
+<h1 class="title">Machine Learning post 2005</h1>
+<div class="jb-text docutils container">
+<p>Graphics processing units (GPU) can do highly parallel computation very efficiently</p>
+<p>Neural networks can be run on much larger scale</p>
+<p>Explosive growth of Deep Learning - deep artificial neural networks - revolutionized research in AI, ML, robotics, and many other fields</p>
+<p>Size of the networks is growing exponentially: GPT-3 (Natural language understanding) system uses a network with 175 billion parameters</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-14c94e96-f6a8-4f7e-9dc0-a118f9cf2d54" ><span id="id-14c94e96-f6a8-4f7e-9dc0-a118f9cf2d54"><img id="img-id-14c94e96-f6a8-4f7e-9dc0-a118f9cf2d54"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-b6ecccc5-9a1a-4785-b7f9-d44c8276d63d" ><span id="id-b6ecccc5-9a1a-4785-b7f9-d44c8276d63d"><img id="img-id-b6ecccc5-9a1a-4785-b7f9-d44c8276d63d" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00010_frag_00001" data-state="slide_00010_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-post-2005">
+<h1 class="title">Machine Learning post 2005</h1>
+<div class="jb-text docutils container">
+<p>Graphics processing units (GPU) can do highly parallel computation very efficiently</p>
+<p>Neural networks can be run on much larger scale</p>
+<p>Explosive growth of Deep Learning - deep artificial neural networks - revolutionized research in AI, ML, robotics, and many other fields</p>
+<p>Size of the networks is growing exponentially: GPT-3 (Natural language understanding) system uses a network with 175 billion parameters</p>
+<p>Cost to train is estimated to 10 - 20 Million USD</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-bc878d7f-bf25-4fc4-a06a-c626ad632686" ><span id="id-bc878d7f-bf25-4fc4-a06a-c626ad632686"><img id="img-id-bc878d7f-bf25-4fc4-a06a-c626ad632686"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-ff754a6e-7a5a-4b07-9052-751fae9086f6" ><span id="id-ff754a6e-7a5a-4b07-9052-751fae9086f6"><img id="img-id-ff754a6e-7a5a-4b07-9052-751fae9086f6" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00011_frag_00001" data-state="slide_00011_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-post-2005">
+<h1 class="title">Machine Learning post 2005</h1>
+<div class="jb-text docutils container">
+<p>Graphics processing units (GPU) can do highly parallel computation very efficiently</p>
+<p>Neural networks can be run on much larger scale</p>
+<p>Explosive growth of Deep Learning - deep artificial neural networks - revolutionized research in AI, ML, robotics, and many other fields</p>
+<p>Size of the networks is growing exponentially: GPT-3 (Natural language understanding) system uses a network with 175 billion parameters</p>
+<p>Cost to train is estimated to 10 - 20 Million USD</p>
+<p>Convolutional neural networks (CNN) have revolutionized computer vision. Most vision systems now include
+a training step</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-2f74fc32-5f9c-47b6-8879-3bb4f2ce3e2f" ><span id="id-2f74fc32-5f9c-47b6-8879-3bb4f2ce3e2f"><img id="img-id-2f74fc32-5f9c-47b6-8879-3bb4f2ce3e2f"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-0536bc1a-fb0c-413d-8587-29a8e5c8dab7" ><span id="id-0536bc1a-fb0c-413d-8587-29a8e5c8dab7"><img id="img-id-0536bc1a-fb0c-413d-8587-29a8e5c8dab7" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00012_frag_00001" data-state="slide_00012_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approachs</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-939108b6-8415-4dbc-b62d-75ead0164e8b" ><span id="id-939108b6-8415-4dbc-b62d-75ead0164e8b"><img id="img-id-939108b6-8415-4dbc-b62d-75ead0164e8b"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-f2720baf-8746-4f63-8a66-e35efb7d37af" ><span id="id-f2720baf-8746-4f63-8a66-e35efb7d37af"><img id="img-id-f2720baf-8746-4f63-8a66-e35efb7d37af" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00013_frag_00001" data-state="slide_00013_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approaches</p>
+<p>Structural description of the learned Pattern</p>
+<ul class="simple">
+<li>Can be used to make predictions (Generalize)</li>
+<li>Understand the reasoning for making the predictions</li>
+</ul>
+<p>Contact lens database</p>
+<ul class="simple">
+<li>if..then..else rules</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-c0057d86-0273-4678-bc07-f511dc64071d" ><span id="id-c0057d86-0273-4678-bc07-f511dc64071d"><img id="img-id-c0057d86-0273-4678-bc07-f511dc64071d"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-f4dfe295-6ce6-438f-9dad-71d67501d445" ><span id="id-f4dfe295-6ce6-438f-9dad-71d67501d445"><img id="img-id-f4dfe295-6ce6-438f-9dad-71d67501d445" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00014_frag_00001" data-state="slide_00014_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approaches</p>
+<p>Structural description of the learned Pattern</p>
+<ul class="simple">
+<li>Can be used to make predictions (Generalize)</li>
+<li>Understand the reasoning for making the predictions</li>
+</ul>
+<p>Contact lens database</p>
+<ul class="simple">
+<li>if..then..else rules</li>
+</ul>
+<p><tt class="docutils literal">`
+if tear_production == reduced then recommend = none
+else if age == young and astignatic == no then recommendation = soft
+`</tt></p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-8042db39-6f4a-4746-b545-3976f8f5d779" ><span id="id-8042db39-6f4a-4746-b545-3976f8f5d779"><img id="img-id-8042db39-6f4a-4746-b545-3976f8f5d779"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-736edc36-fe01-47ab-bab8-e8ac105b41f3" ><span id="id-736edc36-fe01-47ab-bab8-e8ac105b41f3"><img id="img-id-736edc36-fe01-47ab-bab8-e8ac105b41f3" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00015_frag_00001" data-state="slide_00015_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approaches</p>
+<p>Structural description of the learned Pattern</p>
+<ul class="simple">
+<li>Can be used to make predictions (Generalize)</li>
+<li>Understand the reasoning for making the predictions</li>
+</ul>
+<p>Contact lens database</p>
+<ul class="simple">
+<li>if..then..else rules</li>
+</ul>
+<p>``
+if tear_production == reduced then</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 23)</p>
+Unexpected indentation.</div>
+<blockquote>
+recommend = none</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 24)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<dl class="docutils">
+<dt>else if age == young and astignatic == no then</dt>
+<dd>recommendation = soft</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a></p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26); <em><a href="#id2">backlink</a></em></p>
+Inline literal start-string without end-string.</div>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-5719ab6e-9be0-4b19-9739-309124d1fad6" ><span id="id-5719ab6e-9be0-4b19-9739-309124d1fad6"><img id="img-id-5719ab6e-9be0-4b19-9739-309124d1fad6"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-0d764ac1-8b86-4c8c-8773-082598615f6a" ><span id="id-0d764ac1-8b86-4c8c-8773-082598615f6a"><img id="img-id-0d764ac1-8b86-4c8c-8773-082598615f6a" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00016_frag_00001" data-state="slide_00016_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approaches</p>
+<p>Structural description of the learned Pattern</p>
+<ul class="simple">
+<li>Can be used to make predictions (Generalize)</li>
+<li>Understand the reasoning for making the predictions</li>
+</ul>
+<p>Contact lens database</p>
+<ul class="simple">
+<li>if..then..else rules</li>
+</ul>
+<p>``
+if tear_production == reduced then</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 23)</p>
+Unexpected indentation.</div>
+<blockquote>
+recommend = none</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 24)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<dl class="docutils">
+<dt>else if age == young and astignatic == no then</dt>
+<dd>recommendation = soft</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a></p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26); <em><a href="#id2">backlink</a></em></p>
+Inline literal start-string without end-string.</div>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-89c7fce3-53d3-48f5-959b-910a090d5528" ><span id="id-89c7fce3-53d3-48f5-959b-910a090d5528"><img id="img-id-89c7fce3-53d3-48f5-959b-910a090d5528"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-d9f300e2-0c61-4d08-afbb-7776228d3e6a" ><span id="id-d9f300e2-0c61-4d08-afbb-7776228d3e6a"><img id="img-id-d9f300e2-0c61-4d08-afbb-7776228d3e6a" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00017_frag_00001" data-state="slide_00017_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approaches</p>
+<p>Structural description of the learned Pattern</p>
+<ul class="simple">
+<li>Can be used to make predictions (Generalize)</li>
+<li>Understand the reasoning for making the predictions</li>
+</ul>
+<p>Contact lens database</p>
+<ul class="simple">
+<li>if..then..else rules</li>
+</ul>
+<p>``
+if tear_production == reduced then
+recommend = none
+else if age == young and astignatic == no then
+recommendation = soft
+``</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-cdacd418-f987-417b-9826-40dd9f06b7e4" ><span id="id-cdacd418-f987-417b-9826-40dd9f06b7e4"><img id="img-id-cdacd418-f987-417b-9826-40dd9f06b7e4"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-629ffdc1-aa24-47b8-9fa2-245ba8d326c3" ><span id="id-629ffdc1-aa24-47b8-9fa2-245ba8d326c3"><img id="img-id-629ffdc1-aa24-47b8-9fa2-245ba8d326c3" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00018_frag_00001" data-state="slide_00018_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approaches</p>
+<p>Structural description of the learned Pattern</p>
+<ul class="simple">
+<li>Can be used to make predictions (Generalize)</li>
+<li>Understand the reasoning for making the predictions</li>
+</ul>
+<p>Contact lens database</p>
+<ul class="simple">
+<li>if..then..else rules</li>
+</ul>
+<p><tt class="docutils literal">`
+if tear_production == reduced then
+recommend = none
+else if age == young and astignatic == no then
+recommendation = soft
+`</tt></p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-b7db34ec-4567-4587-9a86-86a1f9fb3b75" ><span id="id-b7db34ec-4567-4587-9a86-86a1f9fb3b75"><img id="img-id-b7db34ec-4567-4587-9a86-86a1f9fb3b75"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-6276af05-02a4-4221-931c-1ee753357c4f" ><span id="id-6276af05-02a4-4221-931c-1ee753357c4f"><img id="img-id-6276af05-02a4-4221-931c-1ee753357c4f" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00019_frag_00001" data-state="slide_00019_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approaches</p>
+<p>Structural description of the learned Pattern</p>
+<ul class="simple">
+<li>Can be used to make predictions (Generalize)</li>
+<li>Understand the reasoning for making the predictions</li>
+</ul>
+<p>Contact lens database</p>
+<ul class="simple">
+<li>if..then..else rules</li>
+</ul>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+if tear_production == reduced then</p>
+<div class="system-message" id="id1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 21); <em><a href="#id2">backlink</a></em></p>
+Inline literal start-string without end-string.</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 23)</p>
+Unexpected indentation.</div>
+<blockquote>
+recommend = none</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 24)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<dl class="docutils">
+<dt>else if age == young and astignatic == no then</dt>
+<dd>recommendation = soft</dd>
+</dl>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26)</p>
+Definition list ends without a blank line; unexpected unindent.</div>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
+<div class="system-message" id="id3">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26); <em><a href="#id4">backlink</a></em></p>
+Inline literal start-string without end-string.</div>
+<div class="system-message" id="id5">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26); <em><a href="#id6">backlink</a></em></p>
+Inline interpreted text or phrase reference start-string without end-string.</div>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-06eee756-b3dd-4438-be4e-8911be2e8e7b" ><span id="id-06eee756-b3dd-4438-be4e-8911be2e8e7b"><img id="img-id-06eee756-b3dd-4438-be4e-8911be2e8e7b"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-29defe6e-9912-49f6-ab5a-7fa9c6435310" ><span id="id-29defe6e-9912-49f6-ab5a-7fa9c6435310"><img id="img-id-29defe6e-9912-49f6-ab5a-7fa9c6435310" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00020_frag_00001" data-state="slide_00020_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning">
+<h1 class="title">Machine Learning</h1>
+<div class="jb-text docutils container">
+<p>One issue with deep learning and other ML systems is that they are black boxes. Big push for explainable AI (XAI)</p>
+<p>Medical systems are sometimes not suitable for deep learning approaches</p>
+<p>Structural description of the learned Pattern</p>
+<ul class="simple">
+<li>Can be used to make predictions (Generalize)</li>
+<li>Understand the reasoning for making the predictions</li>
+</ul>
+<p>Contact lens database</p>
+<ul class="simple">
+<li>if..then..else rules</li>
+</ul>
+<p><tt class="docutils literal">`
+if tear_production == reduced then
+recommend = none
+else if age == young and astignatic == no then
+recommendation = soft
+`</tt></p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-cf84f160-cc59-4598-b411-45ef91afb58e" ><span id="id-cf84f160-cc59-4598-b411-45ef91afb58e"><img id="img-id-cf84f160-cc59-4598-b411-45ef91afb58e"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-9b4e8d2d-5912-4374-90ca-0dd5e4051ec7" ><span id="id-9b4e8d2d-5912-4374-90ca-0dd5e4051ec7"><img id="img-id-9b4e8d2d-5912-4374-90ca-0dd5e4051ec7" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00021_frag_00001" data-state="slide_00021_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-applications">
+<h1 class="title">Machine Learning Applications</h1>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 5)</p>
+<p>Content block expected for the &quot;container&quot; directive; none found.</p>
+<pre class="literal-block">
+.. container:: jb-text
+</pre>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 6)</p>
+Explicit markup ends without a blank line; unexpected unindent.</div>
+<p>Patient records (all information)</p>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-4ee608f0-d02f-4f09-869f-30bd422259bb" ><span id="id-4ee608f0-d02f-4f09-869f-30bd422259bb"><img id="img-id-4ee608f0-d02f-4f09-869f-30bd422259bb"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-3e37fbef-801a-4b7d-99fb-f882e787772b" ><span id="id-3e37fbef-801a-4b7d-99fb-f882e787772b"><img id="img-id-3e37fbef-801a-4b7d-99fb-f882e787772b" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00022_frag_00001" data-state="slide_00022_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-applications">
+<h1 class="title">Machine Learning Applications</h1>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 5)</p>
+<p>Content block expected for the &quot;container&quot; directive; none found.</p>
+<pre class="literal-block">
+.. container:: jb-text
+
+</pre>
+</div>
+<p>Patient records (all information)</p>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-cc6bee0e-b06d-434e-a02c-aa074e26de72" ><span id="id-cc6bee0e-b06d-434e-a02c-aa074e26de72"><img id="img-id-cc6bee0e-b06d-434e-a02c-aa074e26de72"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-9fc6a16e-7748-4b02-a387-deee394180fd" ><span id="id-9fc6a16e-7748-4b02-a387-deee394180fd"><img id="img-id-9fc6a16e-7748-4b02-a387-deee394180fd" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00023_frag_00001" data-state="slide_00023_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-applications">
+<h1 class="title">Machine Learning Applications</h1>
+<div class="jb-text docutils container">
+Patient records (all information)</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-dd0a64a7-28d8-43a7-965a-863c557b355a" ><span id="id-dd0a64a7-28d8-43a7-965a-863c557b355a"><img id="img-id-dd0a64a7-28d8-43a7-965a-863c557b355a"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-a4a099d0-cb6b-4b01-a235-20ef3efa82d7" ><span id="id-a4a099d0-cb6b-4b01-a235-20ef3efa82d7"><img id="img-id-a4a099d0-cb6b-4b01-a235-20ef3efa82d7" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00024_frag_00001" data-state="slide_00024_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-applications">
+<h1 class="title">Machine Learning Applications</h1>
+<div class="jb-text docutils container">
+<p>Patient records (all information)</p>
+<ul class="simple">
+<li>Predict if patient requires emergency care (giving birth)</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-9a52bbe1-a74a-4a41-87ca-dcaf6d85eefc" ><span id="id-9a52bbe1-a74a-4a41-87ca-dcaf6d85eefc"><img id="img-id-9a52bbe1-a74a-4a41-87ca-dcaf6d85eefc"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-ddb562cb-6fa5-4f38-ae58-07ead0af0c29" ><span id="id-ddb562cb-6fa5-4f38-ae58-07ead0af0c29"><img id="img-id-ddb562cb-6fa5-4f38-ae58-07ead0af0c29" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00025_frag_00001" data-state="slide_00025_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-applications">
+<h1 class="title">Machine Learning Applications</h1>
+<div class="jb-text docutils container">
+<p>Patient records (all information)</p>
+<ul class="simple">
+<li>Predict if patient requires emergency care (giving birth)</li>
+</ul>
+<p>User executes a series of commands on the command line, then learn how to automate that task. Github Co-pilot</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-2387ca61-9cc7-4afe-ad4c-2498f3cfac40" ><span id="id-2387ca61-9cc7-4afe-ad4c-2498f3cfac40"><img id="img-id-2387ca61-9cc7-4afe-ad4c-2498f3cfac40"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-99b6af43-9d73-4b41-9026-e6eaf0edcbe8" ><span id="id-99b6af43-9d73-4b41-9026-e6eaf0edcbe8"><img id="img-id-99b6af43-9d73-4b41-9026-e6eaf0edcbe8" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00026_frag_00001" data-state="slide_00026_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-applications">
+<h1 class="title">Machine Learning Applications</h1>
+<div class="jb-text docutils container">
+<p>Patient records (all information)</p>
+<ul class="simple">
+<li>Predict if patient requires emergency care (giving birth)</li>
+</ul>
+<p>User executes a series of commands on the command line, then learn how to automate that task. Github Co-pilot</p>
+<p>Credit risk analysis: Approve/decline applications for a credit</p>
+<ul class="simple">
+<li>92% of the cases can be identified easily by checking income and wealth</li>
+<li>ML researchers: correct decision to reduce risk of bankruptcy is to reject the 8% that are unclear</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-1f8a6ab2-e85d-4540-9a86-5845b1f92fa8" ><span id="id-1f8a6ab2-e85d-4540-9a86-5845b1f92fa8"><img id="img-id-1f8a6ab2-e85d-4540-9a86-5845b1f92fa8"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-aeb211f2-6322-4375-84d8-d77cf5265e53" ><span id="id-aeb211f2-6322-4375-84d8-d77cf5265e53"><img id="img-id-aeb211f2-6322-4375-84d8-d77cf5265e53" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00027_frag_00001" data-state="slide_00027_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-applications">
+<h1 class="title">Machine Learning Applications</h1>
+<div class="jb-text docutils container">
+<p>Patient records (all information)</p>
+<ul class="simple">
+<li>Predict if patient requires emergency care (giving birth)</li>
+</ul>
+<p>User executes a series of commands on the command line, then learn how to automate that task. Github Co-pilot</p>
+<p>Credit risk analysis: Approve/decline applications for a credit</p>
+<ul class="simple">
+<li>92% of the cases can be identified easily by checking income and wealth</li>
+<li>ML researchers: correct decision to reduce risk of bankruptcy is to reject the 8% that are unclear</li>
+<li>Customers that always pay the bill are 0 inclome for the bank</li>
+<li>Customers where the bank makes the most money are those 8% unclear cases</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-2e4a57a3-b109-4084-b294-3c91170f889d" ><span id="id-2e4a57a3-b109-4084-b294-3c91170f889d"><img id="img-id-2e4a57a3-b109-4084-b294-3c91170f889d"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-874e8ff6-f7f4-409e-9210-3962ee13a9c3" ><span id="id-874e8ff6-f7f4-409e-9210-3962ee13a9c3"><img id="img-id-874e8ff6-f7f4-409e-9210-3962ee13a9c3" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00028_frag_00001" data-state="slide_00028_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="relevant-disciplines-adaptation">
+<h1 class="title">Relevant Disciplines: Adaptation</h1>
+<div class="jb-text docutils container">
+<p>Artificial Intelligence</p>
+<p>Bayesian Methods</p>
+<p>Computational complexity theory</p>
+<p>Control theory</p>
+<p>Information theory</p>
+<p>Philosophy</p>
+<p>Psychology and Neurobiology</p>
+<p>Statistics</p>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-26a85fb8-60c6-4d10-a2e7-f5912c38ca93" ><span id="id-26a85fb8-60c6-4d10-a2e7-f5912c38ca93"><img id="img-id-26a85fb8-60c6-4d10-a2e7-f5912c38ca93"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-4c6cea57-cec7-41bc-a41b-7f5bee599376" ><span id="id-4c6cea57-cec7-41bc-a41b-7f5bee599376"><img id="img-id-4c6cea57-cec7-41bc-a41b-7f5bee599376" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00029_frag_00001" data-state="slide_00029_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="machine-learning-applications">
+<h1 class="title">Machine Learning Applications</h1>
+<div class="jb-text docutils container">
+<p>Patient records (all information)</p>
+<ul class="simple">
+<li>Predict if patient requires emergency care (giving birth)</li>
+</ul>
+<p>User executes a series of commands on the command line, then learn how to automate that task. Github Co-pilot</p>
+<p>Credit risk analysis: Approve/decline applications for a credit</p>
+<ul class="simple">
+<li>90% of the cases can be identified easily by checking income and wealth</li>
+<li>ML researchers: correct decision to reduce risk of bankruptcy is to reject the 8% that are unclear</li>
+<li>Customers that always pay the bill are 0 inclome for the bank</li>
+<li>Customers where the bank makes the most money are those 10% unclear cases. 50% of those defaulted on loan</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-6dccc942-8a2f-46d0-82e1-377e2256293d" ><span id="id-6dccc942-8a2f-46d0-82e1-377e2256293d"><img id="img-id-6dccc942-8a2f-46d0-82e1-377e2256293d"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-236404ce-4ecd-4775-afd4-70d746e6f26f" ><span id="id-236404ce-4ecd-4775-afd4-70d746e6f26f"><img id="img-id-236404ce-4ecd-4775-afd4-70d746e6f26f" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00030_frag_00001" data-state="slide_00030_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+<div class="document" id="definition-of-learning">
+<h1 class="title">Definition of Learning</h1>
+<div class="jb-text docutils container">
+<p>Improving (performance measure P) with experience E at some task T</p>
+<p>Play Go/Chess/Checkers</p>
+<ul class="simple">
+<li>Task T: play according to the rules of the game</li>
+<li>Performance meausre P: Percentage of games won</li>
+<li>Experience E: play against yourself</li>
+</ul>
+<p>Alvinn - self-driving car</p>
+<ul class="simple">
+<li>Task T: drive in a loop on the parking lot</li>
+<li>Performance measure P: Sum of the squared differences to the human drivers steering angle</li>
+<li>Experience E: human drivers</li>
+</ul>
+</div>
+</div>
+
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-ec4643d9-86bd-41ed-829c-5482c089c170" ><span id="id-ec4643d9-86bd-41ed-829c-5482c089c170"><img id="img-id-ec4643d9-86bd-41ed-829c-5482c089c170"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-3b3effd6-779a-4c10-8950-ca042419151c" ><span id="id-3b3effd6-779a-4c10-8950-ca042419151c"><img id="img-id-3b3effd6-779a-4c10-8950-ca042419151c" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+        </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                math: {
+                    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                    config: 'TeX-AMS_HTML-full',  // See http://docs.mathjax.org/en/latest/config-files.html
+                    // tex2jax: {
+                    //     inlineMath: [['$', '$'], ['\(', '\)']],
+                    //     displayMath: [['$$', '$$'], ['\[', '\]']],
+                    //     processEscapes: true,
+                    //     processEnvironments: true,
+                    //     skipTags: ['script', 'noscript', 'style', 'textarea', 'code', 'pre'],
+                    //     displayAlign: 'center',
+                    // }                
+                },
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+        </script>
+
+        <script>
+            <!-- Assets -->
+var assets = {
+"robbi" : new JBImage( "robbi", "12677", "162", "138", null, null, "assets/images/robbi", "png" ),
+"logo" : new JBImage( "logo", "12033", "0", "0", null, null, "assets/images/logo", "png" ),
+"fira-logo-1" : new JBImage( "fira-logo-1", "93836", "0", "0", null, null, "assets/images/FIRA-logo-1", "png" ),
+"pairLogo" : new JBImage( "pairLogo", "63051", "0", "0", null, null, "assets/images/pairLogo", "png" ) 
+};
+var assetInstances = {
+    "id-07d2b2d9-b0bf-4c9f-80bd-b50d7da68afb": assets["robbi"],
+    "id-1e91605d-8eeb-4be3-b0f1-42de408ece45": assets["robbi"],
+    "id-b049f915-a5e9-4260-abd2-33c06ae7af52": assets["robbi"],
+    "id-81bb5626-203b-45d6-aedc-ca348a4cebab": assets["robbi"],
+    "id-bdb12602-98f0-4300-b5a3-b97c0caf53fb": assets["robbi"],
+    "id-4f6574e5-156f-44a5-abb5-a47b99b52924": assets["robbi"],
+    "id-b3f838e0-083e-47a9-8ddd-62c09f974ea2": assets["robbi"],
+    "id-b6ecccc5-9a1a-4785-b7f9-d44c8276d63d": assets["robbi"],
+    "id-ff754a6e-7a5a-4b07-9052-751fae9086f6": assets["robbi"],
+    "id-0536bc1a-fb0c-413d-8587-29a8e5c8dab7": assets["robbi"],
+    "id-f2720baf-8746-4f63-8a66-e35efb7d37af": assets["robbi"],
+    "id-f4dfe295-6ce6-438f-9dad-71d67501d445": assets["robbi"],
+    "id-736edc36-fe01-47ab-bab8-e8ac105b41f3": assets["robbi"],
+    "id-0d764ac1-8b86-4c8c-8773-082598615f6a": assets["robbi"],
+    "id-d9f300e2-0c61-4d08-afbb-7776228d3e6a": assets["robbi"],
+    "id-629ffdc1-aa24-47b8-9fa2-245ba8d326c3": assets["robbi"],
+    "id-6276af05-02a4-4221-931c-1ee753357c4f": assets["robbi"],
+    "id-29defe6e-9912-49f6-ab5a-7fa9c6435310": assets["robbi"],
+    "id-9b4e8d2d-5912-4374-90ca-0dd5e4051ec7": assets["robbi"],
+    "id-3e37fbef-801a-4b7d-99fb-f882e787772b": assets["robbi"],
+    "id-9fc6a16e-7748-4b02-a387-deee394180fd": assets["robbi"],
+    "id-a4a099d0-cb6b-4b01-a235-20ef3efa82d7": assets["robbi"],
+    "id-ddb562cb-6fa5-4f38-ae58-07ead0af0c29": assets["robbi"],
+    "id-99b6af43-9d73-4b41-9026-e6eaf0edcbe8": assets["robbi"],
+    "id-aeb211f2-6322-4375-84d8-d77cf5265e53": assets["robbi"],
+    "id-874e8ff6-f7f4-409e-9210-3962ee13a9c3": assets["robbi"],
+    "id-4c6cea57-cec7-41bc-a41b-7f5bee599376": assets["robbi"],
+    "id-236404ce-4ecd-4775-afd4-70d746e6f26f": assets["robbi"],
+    "id-3b3effd6-779a-4c10-8950-ca042419151c": assets["robbi"],
+    "id-8070cf8e-afff-4bca-a6d7-9556776738d7": assets["logo"],
+    "id-d61e4a9c-2f4f-400c-88b7-53afcddbf878": assets["logo"],
+    "id-47d7d765-ad87-4149-8c8a-9defceec770b": assets["logo"],
+    "id-89748c07-9258-41e2-a71c-42efcca7d21d": assets["logo"],
+    "id-aa716b71-d98e-481b-a118-81a10b80855a": assets["logo"],
+    "id-aa6a9fb9-2539-4bd6-b966-51edf691abca": assets["logo"],
+    "id-d01209c8-2966-4c53-bd53-a4d1a923b256": assets["logo"],
+    "id-14c94e96-f6a8-4f7e-9dc0-a118f9cf2d54": assets["logo"],
+    "id-bc878d7f-bf25-4fc4-a06a-c626ad632686": assets["logo"],
+    "id-2f74fc32-5f9c-47b6-8879-3bb4f2ce3e2f": assets["logo"],
+    "id-939108b6-8415-4dbc-b62d-75ead0164e8b": assets["logo"],
+    "id-c0057d86-0273-4678-bc07-f511dc64071d": assets["logo"],
+    "id-8042db39-6f4a-4746-b545-3976f8f5d779": assets["logo"],
+    "id-5719ab6e-9be0-4b19-9739-309124d1fad6": assets["logo"],
+    "id-89c7fce3-53d3-48f5-959b-910a090d5528": assets["logo"],
+    "id-cdacd418-f987-417b-9826-40dd9f06b7e4": assets["logo"],
+    "id-b7db34ec-4567-4587-9a86-86a1f9fb3b75": assets["logo"],
+    "id-06eee756-b3dd-4438-be4e-8911be2e8e7b": assets["logo"],
+    "id-cf84f160-cc59-4598-b411-45ef91afb58e": assets["logo"],
+    "id-4ee608f0-d02f-4f09-869f-30bd422259bb": assets["logo"],
+    "id-cc6bee0e-b06d-434e-a02c-aa074e26de72": assets["logo"],
+    "id-dd0a64a7-28d8-43a7-965a-863c557b355a": assets["logo"],
+    "id-9a52bbe1-a74a-4a41-87ca-dcaf6d85eefc": assets["logo"],
+    "id-2387ca61-9cc7-4afe-ad4c-2498f3cfac40": assets["logo"],
+    "id-1f8a6ab2-e85d-4540-9a86-5845b1f92fa8": assets["logo"],
+    "id-2e4a57a3-b109-4084-b294-3c91170f889d": assets["logo"],
+    "id-26a85fb8-60c6-4d10-a2e7-f5912c38ca93": assets["logo"],
+    "id-6dccc942-8a2f-46d0-82e1-377e2256293d": assets["logo"],
+    "id-ec4643d9-86bd-41ed-829c-5482c089c170": assets["logo"]
+};
+<!-- End of Assets -->
+
+            convertURLs(assetInstances, "smart-path");
+        </script>
+        <script>
+            <!-- Characters -->
+var characters =
+{};
+<!-- End of Characters -->
+
+        </script>
+    </body>
+</html>
